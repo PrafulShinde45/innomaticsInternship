@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart Website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1>Galexy<br>Electronics<br>Store (IES)</h1>
+            <div class="cart-icon" id="cart-icon" onclick="toggleCart()">🛒<span id="item-count">0</span></div>
+            <ul class="nav-links">
+                <li><button onclick="showAllProducts()">All Products</button></li>
+                <li><button onclick="filterProducts('mobile')">Mobiles</button></li>
+                <li><button onclick="filterProducts('laptop')">Laptops</button></li>
+                <li><button onclick="filterProducts('accessories')">Accessories</button></li>
+                <li><button onclick="filterProducts('electronics')">Electronics</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="product-list" id="product-list">
+        <div class="product">
+            <h3>Smartphone X</h3>
+            <p>Powerful processor, 64MP camera, and long-lasting battery.</p>
+            <strong>Price: ₹24,999</strong>
+            <button onclick="addToCart('Smartphone X', 24999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Laptop Pro</h3>
+            <p>Ultra-slim design, 16GB RAM, 512GB SSD, ideal for work & gaming.</p>
+            <strong>Price: ₹74,999</strong>
+            <button onclick="addToCart('Laptop Pro', 74999)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Wireless Earbuds</h3>
+            <p>Crystal-clear sound, noise cancellation, and 24-hour battery life.</p>
+            <strong>Price: ₹3,499</strong>
+            <button onclick="addToCart('Wireless Earbuds', 3499)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Smartwatch</h3>
+            <p>Track your fitness, receive notifications, and stay connected.</p>
+            <strong>Price: ₹5,999</strong>
+            <button onclick="addToCart('Smartwatch', 5999)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart" id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="total">
+            <strong>Total: ₹<span id="total-price">0.00</span></strong>
+        </div>
+        <button id="empty-cart">Empty Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
